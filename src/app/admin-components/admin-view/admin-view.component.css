@@ -1,4 +1,6 @@
 .title-details {
+  background-color: white;
+  opacity: 0.9;
   max-width: 800px;
   margin: 20px auto;
   position: relative;

@@ -5,10 +5,11 @@
     font-size: large;
   }
 
-/* Container */
 .container {
-  text-align: center;
-}
+    text-align: center;
+    background-image: url("https://images.pexels.com/photos/2041540/pexels-photo-2041540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: repeat-y;
+  }
 
 /* Form Card */
 .card {

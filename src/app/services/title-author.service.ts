@@ -10,7 +10,7 @@ export class TitleAuthorService {
   private apiUrl = 'http://localhost:8090/api/authortitles/post';
   constructor(private http: HttpClient) { }
 
-  addNewTitleAuthorModel(titleAuthorModel: TitleAuthorModel): Observable<string> {
-    return this.http.post<string>(this.apiUrl, titleAuthorModel);
+  addNewTitleAuthorModel(titleAuthorModel: TitleAuthorModel): Observable<void> {
+    return this.http.post<void>(this.apiUrl, titleAuthorModel);
   }
 }

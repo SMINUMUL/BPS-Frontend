@@ -1,0 +1,18 @@
+<h2>Search By Id</h2>
+ 
+<div>
+    <form>
+        <input type="text" placeholder="Search Publisher Id" name="publisherId" [(ngModel)]="publishersId">
+        <button type="button" class="btn btn-success" (click)="getPublishersById()">Search</button>
+    </form>
+</div>
+ 
+ 
+<div *ngIf="selectedPublisherId">
+    <p>ID:{{selectedPublisherId.id}}</p>
+    <p>NAME:{{selectedPublisherId.name}}</p>
+    <p>CITY:{{selectedPublisherId.city}}</p>
+    <p>COUNTRY:{{selectedPublisherId.country}}</p>
+    <p>STATE:{{selectedPublisherId.state}}</p>
+    <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+</div>

@@ -1,0 +1,61 @@
+.back-button {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 40px;
+    font-size: large;
+  }
+
+/* Container */
+.container {
+  text-align: center;
+}
+
+/* Form Card */
+.card {
+  background-color: #e5e5e5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Header */
+.card-header {
+  background-color: #3a5f7c;
+  color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+
+/* Form Inputs */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Submit Button */
+.btn-success {
+  background-color: #3a5f7c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-success:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

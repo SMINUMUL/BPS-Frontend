@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+    <form >
+      <div class="card mt-4">
+        <div class="card-header bg-primary text-white">
+          <h1>Add Author</h1>
+        </div>
+ 
+        <div class="card-body">
+            <div class="form-group">
+              <label for="firstName">FirstName</label>
+            <input type="text" class="form-control" id="firstName"
+               [(ngModel)]=" authors.firstName" name="firstName"/>
+           
+            <label for="lastName">LastName</label>
+            <input type="text" class="form-control" id="lastName"
+            [(ngModel)]="authors.lastName" name="lastName"/>
+ 
+            <label for="phone">Phone Nuber</label>
+            <input type="text" class="form-control" id="phone"
+            [(ngModel)]="authors.phone" name="phone"/>
+           
+ 
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state"
+            [(ngModel)]="authors.state" name="state"/>
+ 
+ 
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city"
+            [(ngModel)]="authors.city" name="city"/>
+ 
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address"
+            [(ngModel)]="authors.address" name="address"/>
+ 
+            <label for="zip">Zip</label>
+            <input type="text" class="form-control" id="zip"
+            [(ngModel)]="authors.zip" name="zip"/>
+ 
+            <label for="contract">contract</label>
+            <input type="text" class="form-control" id="contract"
+            [(ngModel)]="authors.contract" name="contract"/>
+ 
+        </div>
+    </div>
+    <div class="card-footer  bg-success">
+        <button type="submit" (click)="addNewAuthor()"
+        class="btn btn-light text-success mr-5">
+        Add
+        </button>
+        <button type="reset"
+        class="btn btn-light text-success mx-5">
+        Clear
+        </button>
+    </div>
+    </div>
+</form>
+    </div>
+   
+    <div class="col-3"></div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div>
+    <h1>Employee Details</h1>
+    <form>
+        <input type="text" name="employeeId" [(ngModel)]="employeeId" >
+        <button type="button" class="btn btn-success" (click)="getEmployeeById()">Search</button>
+    </form>
+</div>
+ 
+<div *ngIf="selectedEmployee" >
+    <div *ngFor="let employee of selectedEmployee">
+        <p>ID: {{employee.id}}</p>
+        <p>FIRSTNAME: {{employee.firstName}}</p>
+        <p>MIDDLEINITIAL: {{employee.middleInitial}}</p>
+        <p>lastName: {{employee.lastName}}</p>
+        <p>job id: {{employee.job.id}}</p>
+        <p>job.minLevel: {{employee.job.minLevel}}</p>
+        <p>job.minLevel: {{employee.job.maxLevel}}</p>
+        <p>publisher.id: {{employee.publisher.id}}</p>
+        <p>hireDate: {{employee.hireDate}}</p>
+   
+        <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+    </div>
+   
+</div>

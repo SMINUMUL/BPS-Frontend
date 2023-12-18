@@ -1,0 +1,21 @@
+<h2>Search By State</h2>
+ 
+<div>
+    <form>
+        <input type="text" placeholder="Search Publisher Name" name="state" [(ngModel)]="state">
+        <button type="button" class="btn btn-success" (click)="getPublishersByState()">Search</button>
+    </form>
+</div>
+ 
+ 
+<div *ngIf="selectedPublisherState">
+    <div *ngFor="let Publisher of selectedPublisherState">
+        <p>ID:{{Publisher.id}}</p>
+    <p>NAME:{{Publisher.name}}</p>
+    <p>CITY:{{Publisher.city}}</p>
+    <p>COUNTRY:{{Publisher.country}}</p>
+    <p>STATE:{{Publisher.state}}</p>
+    <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+    </div>
+   
+</div>

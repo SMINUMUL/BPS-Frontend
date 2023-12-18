@@ -1,0 +1,22 @@
+<app-carousel></app-carousel>
+
+<div class="container pl-0 pr-5 pb-0">
+  <div class="row pb">
+    <div *ngFor="let title of titles" class="col-3 text-align-left">
+      <div class="card" style="width: 18rem;">
+        <div class="card-content">
+          <img [src]="title.imageURLString" class="card-img-top" alt="Title Image">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a [routerLink]="['/adminView', title.title]">
+                {{ title.title }}
+              </a>
+            </h5>
+            <p class="card-text">{{ title.notes }}</p>
+            <p class="card-price">Price: {{ title.price | currency:'INR'}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

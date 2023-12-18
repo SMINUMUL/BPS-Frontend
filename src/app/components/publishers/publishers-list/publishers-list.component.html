@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="/publishers" routerLinkActive="active" class="nav-link"><b>Publishers List</b></a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/publisherby-id" routerLinkActive="active" class="nav-link"><b>PublisherById</b></a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/publisherby-name" routerLinkActive="active" class="nav-link"><b>PublisherByName</b></a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/publisherby-city" routerLinkActive="active" class="nav-link"><b>PublisherByCity</b></a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/publisherby-country" routerLinkActive="active" class="nav-link"><b>PublisherByCountry</b></a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/publisherby-state" routerLinkActive="active" class="nav-link"><b>PublisherByState</b></a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/pub-info" routerLinkActive="active" class="nav-link"><b>PublisherInfo</b></a>
+        </li>
+    </ul>
+</nav>
+ 
+<div class="container">
+<table *ngIf="!selectedPublisherId" class="table table-striped" >
+   
+    <thead >
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>CITY</th>
+            <th>STATE</th>
+            <th>COUNTRY</th>
+        </tr>
+    </thead>  
+    <tbody>
+        <tr *ngFor="let publisher of publishers">
+            <td>{{publisher.id}}</td>
+            <td>{{publisher.name}}</td>
+            <td>{{publisher.city}}</td>
+            <td>{{publisher.state}}</td>
+            <td>{{publisher.country}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

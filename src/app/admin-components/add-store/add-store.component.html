@@ -1,0 +1,37 @@
+<div>
+    <h1>Add Store</h1>
+    <form (ngSubmit)="addStore()" #myForm="ngForm">
+        <div class="form-group">
+            <label for="storeName">storeName</label>
+            <input type="text" class="form-control" placeholder="Enter Store Name" id="storeName" name="storeName"
+                   required [(ngModel)]="newStore.storeName">
+        </div>
+        <div class="form-group">
+            <label for="address">Name</label>
+            <input type="text" class="form-control" placeholder="Enter Name" id="Name" name="Name"
+                   required [(ngModel)]="newStore.name">
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" placeholder="Enter Address" id="address" name="address"
+                   required [(ngModel)]="newStore.address">
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" placeholder="Enter City" id="city" name="city"
+                   required [(ngModel)]="newStore.city">
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" class="form-control" placeholder="Enter State" id="state" name="state"
+                   required [(ngModel)]="newStore.state">
+        </div>
+        <div class="form-group">
+            <label for="zip">Zip</label>
+            <input type="text" class="form-control" placeholder="Enter Zip" id="zip" name="zip"
+                   required [(ngModel)]="newStore.zip">
+        </div>
+ 
+ 
+        <button type="submit" class="btn btn-success" [disabled]="myForm.invalid">Add Store</button>
+ 
+</div>

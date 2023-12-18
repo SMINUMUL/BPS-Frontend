@@ -1,0 +1,33 @@
+<div>
+    <h1>Sales Details</h1>
+    <form>
+        <input type="text" placeholder="Enter Order Number" name="orderNumber" [(ngModel)]="orderNumber" [ngModelOptions]="{standalone: true}">
+        <button type="button" class="btn btn-success" (click)="getSaleByOrderNumber()">Search</button>
+    </form>
+</div>
+ 
+<div *ngIf="selectedorderNumber">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Store ID</th>
+          <th>Order Number</th>
+          <th>Order Date</th>
+          <th>Quantity</th>
+          <th>Payment Terms</th>
+          <th>Title ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ selectedorderNumber.store.id }}</td>
+          <td>{{ selectedorderNumber.orderNumber }}</td>
+          <td>{{ selectedorderNumber.orderDate }}</td>
+          <td>{{ selectedorderNumber.qty }}</td>
+          <td>{{ selectedorderNumber.payterms }}</td>
+          <td>{{ selectedorderNumber.title.id }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+  </div>

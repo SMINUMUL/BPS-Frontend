@@ -1,0 +1,22 @@
+<div>
+    <h1>Search Employees by HireDate</h1>
+    <form>
+      <input type="text" placeholder="Enter HireDate" name="hireDate" [(ngModel)]="hiredate">
+      <button type="button" class="btn btn-success" (click)="getEmployeesByHireDate()">Search</button>
+    </form>
+  </div>
+ 
+  <div *ngIf="employees">
+    <div *ngFor="let employee of employees">
+      <p>ID: {{employee.id}}</p>
+      <p>First Name: {{employee.firstName}}</p>
+      <p>MIDDLEINITIAL: {{employee.middleInitial}}</p>
+      <p>lastName: {{employee.lastName}}</p>
+      <p>job id: {{employee.job.id}}</p>
+      <p>job.minLevel: {{employee.job.minLevel}}</p>
+      <p>job.minLevel: {{employee.job.maxLevel}}</p>
+      <p>publisher.id: {{employee.publisher.id}}</p>
+      <p>hireDate: {{employee.hireDate}}</p>
+      <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+    </div>
+  </div>

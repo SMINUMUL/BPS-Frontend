@@ -1,0 +1,25 @@
+<h2>GET EMPLOYEE BY LASTNAME</h2>
+ 
+<div>
+    <form>
+        <input type="text" placeholder="Search EmployeeByLastName" name="name" [(ngModel)]="name">
+        <button type="button" class="btn btn-success" (click)="getEmployeeByLastName()">Search</button>
+    </form>
+</div>
+ 
+ 
+<div *ngIf="selectedEmployeeLastName">
+    <div *ngFor="let Employee of selectedEmployeeLastName">
+        <p>ID: {{Employee.id}}</p>
+        <p>FIRSTNAME: {{Employee.firstName}}</p>
+        <p>MIDDLEINITIAL: {{Employee.middleInitial}}</p>
+        <p>lastName: {{Employee.lastName}}</p>
+        <p>job id: {{Employee.job.id}}</p>
+        <p>job.minLevel: {{Employee.job.minLevel}}</p>
+        <p>job.minLevel: {{Employee.job.maxLevel}}</p>
+        <p>publisher.id: {{Employee.publisher.id}}</p>
+        <p>hireDate: {{Employee.hireDate}}</p>
+    <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+    </div>
+   
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <form>
+          <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+              <h1>Add Jobs</h1>
+            </div>
+ 
+            <div class="card-body">
+              <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" [(ngModel)]="newJob.description" name="description" />
+              </div>
+ 
+              <div class="form-group">
+                <label for="minLevel">Min Level</label>
+                <input type="number" class="form-control" id="minLevel" [(ngModel)]="newJob.minLevel" name="minLevel" />
+              </div>
+ 
+              <div class="form-group">
+                <label for="maxLevel">Max Level</label>
+                <input type="number" class="form-control" id="maxLevel" [(ngModel)]="newJob.maxLevel" name="maxLevel" />
+              </div>
+            </div>
+ 
+            <div class="card-footer bg-success">
+              <button type="submit" (click)="addNewJob()" class="btn btn-light text-success mr-5">Add</button>
+              <button type="reset" class="btn btn-light text-success mx-5">Clear</button>
+            </div>
+          </div>
+        </form>
+      </div>
+ 
+      <div class="col-3"></div>
+    </div>
+  </div>

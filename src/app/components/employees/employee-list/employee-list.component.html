@@ -1,0 +1,48 @@
+<h2>employee-list</h2>
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+   
+ 
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="/employeeview-id" routerLinkActive="active" class="nav-link">GET_Id</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/employee-firstname" routerLinkActive="active" class="nav-link">GET_FirstName</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/employee-pubid" routerLinkActive="active" class="nav-link">GET_PubId</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/employee-lastname" routerLinkActive="active" class="nav-link">GET_LastName</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/employee-hiredate" routerLinkActive="active" class="nav-link">GET_Hiredate</a>
+        </li>
+    </ul>
+</nav>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>FNAME</th>
+            <th>MINIT</th>
+            <th>LNAME</th>
+            <th>JOB_ID</th>
+            <th>JOB_LVL</th>
+            <th>PUB_ID</th>
+            <th>HIRE_DATE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.firstName}}</td>
+            <td>{{employee.middleInitial}}</td>
+            <td>{{employee.lastName}}</td>
+            <td>{{employee.job.id}}</td>
+            <td>{{employee.jobLevel}}</td>
+            <td>{{employee.publisher.id}}</td>
+            <td>{{employee.hireDate}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+    <form >
+      <div class="card mt-4">
+        <div class="card-header bg-success text-white">
+          <h1>UPDATE PubInfo</h1>
+        </div>
+ 
+      <div class="card-body">
+        <div class="form-group">
+ 
+          <label for="name">ID</label>
+          <input type="text" class="form-control" id="id"
+             [(ngModel)]=" pubinfo.id" name="id"
+          />
+          <label for="name">Pub_Id</label>
+        <input type="text" class="form-control" id="id"
+           [(ngModel)]=" pubinfo.publisher.id" name="id"
+        />
+ 
+        <label for="city">Logo</label>
+        <input type="text" class="form-control" id="logo"
+        [(ngModel)]=" pubinfo.logo" name="logo"
+         />
+ 
+          <label for="state">PrInfo</label>
+          <input type="text" class="form-control" id="prInfo"
+          [(ngModel)]=" pubinfo.prInfo" name="prInfo"
+           />
+ 
+        </div>
+      </div>
+      <div class="card-footer  bg-success">
+        <button type="submit" (click)="updatePublisher()"
+        class="btn btn-light text-success mr-5">
+        UPDATE
+        </button>
+        <button type="reset"
+        class="btn btn-light text-success mx-5">
+        Clear
+        </button>
+      </div>
+      </div>
+    </form>
+      </div>
+ 
+      <div class="col-3"></div>
+      </div>
+    </div>

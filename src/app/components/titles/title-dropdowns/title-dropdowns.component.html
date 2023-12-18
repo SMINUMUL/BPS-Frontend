@@ -1,0 +1,70 @@
+<div
+  class="dropdown-container"
+  [class.open-dropdown]="
+    isDropdownOpen(1) || isDropdownOpen(2) || isDropdownOpen(3)
+  "
+>
+  <button
+    class="btn mt-2 all-titles-button"
+    style="
+      width: 160px;
+      background-color: #3a5f7c;
+      color: white;
+      font-weight: bold;
+    "
+    (click)="Alltitles()"
+  >
+    All Titles
+  </button>
+  <div class="dropdown" (click)="toggleDropdown(1)">
+    <span class="dropdown-text btn mt-2">Categories</span>
+    <div class="dropdown-list" *ngIf="isDropdownOpen(1)">
+      <div
+        class="list-item btn"
+        *ngFor="let item of Types"
+        (click)="Categories(item)"
+      >
+        {{ item }}
+      </div>
+    </div>
+  </div>
+
+  <div class="dropdown" (click)="toggleDropdown(2)">
+    <span class="dropdown-text btn">Publishers</span>
+    <div class="dropdown-list" *ngIf="isDropdownOpen(2)">
+      <div
+        class="list-item btn"
+        *ngFor="let publisher of publisherNames | keyvalue"
+        (click)="Publishers(publisher.value)"
+      >
+        {{ publisher.key }}
+      </div>
+    </div>
+  </div>
+
+  <div class="dropdown" (click)="toggleDropdown(3)">
+    <span class="dropdown-text btn">Titles By Year</span>
+    <div class="dropdown-list" *ngIf="isDropdownOpen(3)">
+      <div
+        class="list-item btn"
+        *ngFor="let item of Years"
+        (click)="TitlesByYear(item)"
+      >
+        {{ item }}
+      </div>
+    </div>
+  </div>
+
+  <div class="dropdown" (click)="toggleDropdown(4)">
+    <span class="dropdown-text btn">Authors</span>
+    <div class="dropdown-list" *ngIf="isDropdownOpen(4)">
+      <div
+        class="list-item btn"
+        *ngFor="let entry of authorNamesArray"
+        (click)="Authors(entry[0])"
+      >
+        {{ entry[0] }} {{ entry[1] }}
+      </div>
+    </div>
+  </div>
+</div>

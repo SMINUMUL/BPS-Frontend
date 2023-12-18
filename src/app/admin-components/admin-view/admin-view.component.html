@@ -1,0 +1,26 @@
+<div class="back-button">
+  <a [routerLink]="['/adminList']">&#8592; Back</a>
+</div>
+
+<div class="update-button" (click)="onUpdateClick()">Update</div>
+
+<div class="title-details">
+  <div class="title-info">
+    <h2>{{ title?.title }}</h2>
+    <div class="details">
+      <div class="image-container">
+        <img [src]="title?.imageURLString" alt="Title Image" />
+      </div>
+      <div class="info">
+        <p><strong>Type:</strong> {{ title?.type }}</p>
+        <p><strong>Publisher:</strong> {{ title?.publisher?.name }}</p>
+        <p><strong>Price:</strong> {{ title?.price | currency: 'INR' }}</p>
+        <p><strong>Advance:</strong> {{ title?.advance | currency: 'INR' }}</p>
+        <p><strong>Royalty:</strong> {{ title?.royalty }}%</p>
+        <p><strong>YTD Sales:</strong> {{ title?.ytdSales }}</p>
+        <p><strong>Publication Date:</strong> {{ title?.pubdate }}</p>
+        <p><strong>Notes:</strong> {{ title?.notes }}</p>
+      </div>
+    </div>
+  </div>
+</div>

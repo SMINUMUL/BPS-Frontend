@@ -1,0 +1,72 @@
+<div class="back-button">
+    <a [routerLink]="['/employeeList']">&#8592; Back</a>
+  </div>
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-7">
+        <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+          <div class="card">
+            <div class="card-header text-white">
+              <h2 class="text-center">Add New Employee</h2>
+            </div>
+            <div class="card-body">
+              <!-- First Name Input -->
+              <div class="form-group mb-3">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" formControlName="firstName" required>
+              </div>
+  
+              <!-- Middle Initial Input -->
+              <div class="form-group mb-3">
+                <label for="middleInitial">Middle Initial</label>
+                <input type="text" class="form-control" id="middleInitial" formControlName="middleInitial">
+              </div>
+  
+              <!-- Last Name Input -->
+              <div class="form-group mb-3">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" formControlName="lastName" required>
+              </div>
+  
+              <!-- Job Selection -->
+              <div class="form-group mb-3">
+                <label for="jobId">Job</label>
+                <select class="form-control" id="jobId" formControlName="jobId" required>
+                  <option *ngFor="let job of jobs" [value]="job.id">
+                    {{ job.description }}
+                  </option>
+                </select>
+              </div>
+  
+              <!-- Job Level Input -->
+              <div class="form-group mb-3">
+                <label for="jobLevel">Job Level</label>
+                <input type="number" class="form-control" id="jobLevel" formControlName="jobLevel" required>
+              </div>
+  
+              <!-- Publisher Selection -->
+              <div class="form-group mb-3">
+                <label for="publisherId">Publisher</label>
+                <select class="form-control" id="publisherId" formControlName="publisherId" required>
+                  <option *ngFor="let publisher of publishers" [value]="publisher.id">
+                    {{ publisher.name }}
+                  </option>
+                </select>
+              </div>
+  
+              <!-- Hire Date Input -->
+              <div class="form-group mb-3">
+                <label for="hireDate">Hire Date</label>
+                <input type="date" class="form-control" id="hireDate" formControlName="hireDate" required>
+              </div>
+  
+            </div>
+            <div class="d-grid m-3">
+              <button type="submit" class="btn btn-success" [disabled]="employeeForm.invalid">Add Employee</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

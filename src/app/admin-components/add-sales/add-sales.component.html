@@ -1,0 +1,32 @@
+<div class="container align-center">
+    <form class="container mt-5" (ngSubmit)="onSubmit($event)">
+      <div class="form-group">
+        <label for="storeid">Store Id</label>
+        <input type="text" class="form-control" id="storeid" name="storeid" [(ngModel)]="newSale.store.id">
+      </div>
+      <div class="form-group">
+        <label for="email">Title Id</label>
+        <input type="text" class="form-control" id="title" name="title" [(ngModel)]="newSale.title.id">
+      </div>
+      <div class="form-group">
+        <label for="qty">Quantity</label>
+        <input type="number" class="form-control" id="qty" name="qty" [(ngModel)]="newSale.qty">
+      </div>
+      <div class="form-group">
+        <label for="orderDate">Order Date</label>
+        <input type="text" class="form-control" id="orderDate" name="orderDate" [(ngModel)]="newSale.orderDate">
+      </div>
+      <div class="form-group">
+        <label for="payterms">Payterms</label>
+        <input type="text" class="form-control" id="payterms" name="payterms" [(ngModel)]="newSale.payterms">
+      </div><br>
+      <div class="btn btn-light">
+        <button type="submit" class="btn btn-primary mr-5">Add</button>
+        <button type="reset" class="btn btn-primary mx-5">Clear</button>
+      </div>
+    </form>
+ 
+    <div *ngIf="responseMessage" class="mt-3">
+      <p class="text-success">{{ responseMessage }}</p>
+    </div>
+  </div>

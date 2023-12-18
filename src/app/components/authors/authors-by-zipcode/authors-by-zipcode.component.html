@@ -1,0 +1,20 @@
+<div>
+    <h1>Author Detils</h1>
+    <form>
+        <input type="text" placeholder="Enter Author zipcode" name="getCode" [(ngModel)]="getCode">
+        <button type="button" class="btn btn-success" (click)="getAuthorsByZip()">Search</button>
+    </form>
+</div>
+ 
+<div *ngIf="getAuthorCode">
+    <p>ID: {{getAuthorCode?.id}}</p>
+    <p>Last Name: {{getAuthorCode?.lastName}}</p>
+    <p>First Name: {{getAuthorCode?.firstName}}</p>
+    <p>{{getAuthorCode?.phone}}</p>
+    <p>{{getAuthorCode?.address}}</p>
+    <p>{{getAuthorCode?.city}}</p>
+    <p>{{getAuthorCode?.state}}</p>
+    <p>{{getAuthorCode?.zip}}</p>
+    <p>{{getAuthorCode?.contract}}</p>
+    <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+</div>

@@ -1,0 +1,66 @@
+/* title-dropdowns.component.css */
+.dropdown-container {
+  margin-right: 10px;
+  background-color: white;
+  opacity: 0.9;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #3498db;
+  border-radius: 10%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-text {
+  border: 1px solid #2577b7; /* Bootstrap primary color */
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: 160px;
+  padding: 8px 12px;
+}
+
+.dropdown-list {
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #2577b7; /* Bootstrap primary color */
+  border-top: none;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff; /* Set a background color to overlay correctly */
+}
+
+.dropdown:not(.open-dropdown) .dropdown-text {
+  background-color: #3a5f7c; /* Set the background color when the dropdown is not open */
+  color: #fff; /* Set the text color when the dropdown is not open */
+}
+
+.list-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Set the width to 100% to display as a single column */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.list-item:hover {
+  background-color: #f8f9fa; /* Bootstrap background color on hover */
+}
+
+/* Add this rule to adjust spacing when a dropdown is open */
+.dropdown-container.open-dropdown {
+  margin-bottom: 130px; /* Adjust the value as needed */
+}

@@ -1,0 +1,20 @@
+<div>
+    <h1>Job Details</h1>
+    <form>
+        <input type="text" name="jobId" [(ngModel)]="jobId" >
+        <button type="button" class="btn btn-success" (click)="getJobById()">Search</button>
+    </form>
+</div>
+ 
+<div *ngIf="selectedJob" >
+   
+        <p>ID: {{selectedJob.id}}</p>
+        <p>Description: {{selectedJob.description}}</p>
+        <p>MINLEVEL: {{selectedJob.minLevel}}</p>
+        <p>MAXLEVEL: {{selectedJob.maxLevel}}</p>
+       
+   
+        <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+   
+   
+</div>

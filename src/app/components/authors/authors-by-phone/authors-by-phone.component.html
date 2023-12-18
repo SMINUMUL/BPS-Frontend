@@ -1,0 +1,20 @@
+<div>
+    <h1>Author Detils</h1>
+    <form>
+        <input type="text" placeholder="Enter Author Phone Number" name="getPhone" [(ngModel)]="getPhone">
+        <button type="button" class="btn btn-success" (click)="getAuthorsByPhone()">Search</button>
+    </form>
+</div>
+ 
+<div *ngIf="getAuthorNumber">
+    <p>ID: {{getAuthorNumber?.id}}</p>
+    <p>Last Name: {{getAuthorNumber?.lastName}}</p>
+    <p>First Name: {{getAuthorNumber?.firstName}}</p>
+    <p>{{getAuthorNumber?.phone}}</p>
+    <p>{{getAuthorNumber?.address}}</p>
+    <p>{{getAuthorNumber?.city}}</p>
+    <p>{{getAuthorNumber?.state}}</p>
+    <p>{{getAuthorNumber?.zip}}</p>
+    <p>{{getAuthorNumber?.contract}}</p>
+    <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+</div>

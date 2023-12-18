@@ -1,0 +1,86 @@
+<div class="back-button">
+  <a [routerLink]="['/adminList']">&#8592; Back</a>
+</div>
+<div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-7">
+        <form [formGroup]="titleForm" (ngSubmit)="onUpdate()">
+          <div class="card">
+            <div class="card-header text-white">
+              <h2 class="text-center">Update Title</h2>
+            </div>
+            <div class="card-body">
+              <!-- Title Input -->
+              <div class="form-group mb-3">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" formControlName="title" required>
+              </div>
+  
+              <!-- Type Input -->
+              <div class="form-group mb-3">
+                <label for="type">Type</label>
+                <input type="text" class="form-control" id="type" formControlName="type" required>
+              </div>
+  
+              <!-- Publisher Selection -->
+              <div class="form-group mb-3">
+                <label for="publisherId">Publisher</label>
+                <select class="form-control" id="publisherId" formControlName="publisherId" required>
+                  <option *ngFor="let publisher of publishers" [value]="publisher.id">
+                    {{ publisher.name }}
+                  </option>
+                </select>
+              </div>
+  
+              <!-- Price Input -->
+              <div class="form-group mb-3">
+                <label for="price">Price</label>
+                <input type="number" class="form-control" id="price" formControlName="price" required>
+              </div>
+  
+              <!-- Advance Input -->
+              <div class="form-group mb-3">
+                <label for="advance">Advance</label>
+                <input type="number" class="form-control" id="advance" formControlName="advance" required>
+              </div>
+  
+              <!-- Royalty Input -->
+              <div class="form-group mb-3">
+                <label for="royalty">Royalty</label>
+                <input type="number" class="form-control" id="royalty" formControlName="royalty" required>
+              </div>
+  
+              <!-- YTD Sales Input -->
+              <div class="form-group mb-3">
+                <label for="ytdSales">YTD Sales</label>
+                <input type="number" class="form-control" id="ytdSales" formControlName="ytdSales" required>
+              </div>
+  
+              <!-- Notes Input -->
+              <div class="form-group mb-3">
+                <label for="notes">Notes</label>
+                <textarea class="form-control" id="notes" formControlName="notes"></textarea>
+              </div>
+  
+              <!-- Pubdate Input -->
+              <div class="form-group mb-3">
+                <label for="pubdate">Publication Date</label>
+                <input type="date" class="form-control" id="pubdate" formControlName="pubdate" required>
+              </div>
+  
+              <!-- Image URL Input -->
+              <div class="form-group mb-3">
+                <label for="imageURLString">Image URL</label>
+                <input type="text" class="form-control" id="imageURLString" formControlName="imageURLString">
+              </div>
+  
+            </div>
+            <div class="d-grid m-3">
+              <button type="submit" class="btn btn-success" [disabled]="titleForm.invalid">Update Title</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

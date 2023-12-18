@@ -1,0 +1,33 @@
+<div>
+    <h1>Sales Details By ID</h1>
+    <form>
+        <input type="text" placeholder="Enter Order Date" name="orderDate" [(ngModel)]="orderDate">
+        <button type="button" class="btn btn-success" (click)="getSalesByOrderDate()">Search</button>
+    </form>
+</div>
+<div class="container">
+<table *ngIf="selectedOrderDate" class="table">
+    <thead>
+      <tr>
+        <th>Store ID</th>
+        <th>Order Number</th>
+        <th>Order Date</th>
+        <th>Quantity</th>
+        <th>Pay Terms</th>
+        <th>Title ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sale of selectedOrderDate">
+        <td>{{ sale.store?.id }}</td>
+        <td>{{ sale.orderNumber }}</td>
+        <td>{{ sale.orderDate }}</td>
+        <td>{{ sale.qty }}</td>
+        <td>{{ sale.payterms }}</td>
+        <td>{{ sale.title?.id }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <button type="button" class="btn btn-warning" (click)="dateViewAll()">Back</button>
+ 

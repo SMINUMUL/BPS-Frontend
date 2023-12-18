@@ -1,0 +1,20 @@
+<div>
+    <h1>Author Detils</h1>
+    <form>
+        <input type="text" placeholder="Enter Author State" name="getState" [(ngModel)]="getState">
+        <button type="button" class="btn btn-success" (click)="getAuthorsByState()">Search</button>
+    </form>
+</div>
+ 
+<div *ngIf="getAuthorState">
+    <p>ID: {{getAuthorState?.id}}</p>
+    <p>Last Name: {{getAuthorState?.lastName}}</p>
+    <p>First Name: {{getAuthorState?.firstName}}</p>
+    <p>{{getAuthorState?.phone}}</p>
+    <p>{{getAuthorState?.address}}</p>
+    <p>{{getAuthorState?.city}}</p>
+    <p>{{getAuthorState?.state}}</p>
+    <p>{{getAuthorState?.zip}}</p>
+    <p>{{getAuthorState?.contract}}</p>
+    <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+</div>

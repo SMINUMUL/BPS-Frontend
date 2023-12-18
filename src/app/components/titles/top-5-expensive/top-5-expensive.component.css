@@ -1,0 +1,31 @@
+.top-5-expensive {
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 3px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s;
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #2074a0;
+  }
+  

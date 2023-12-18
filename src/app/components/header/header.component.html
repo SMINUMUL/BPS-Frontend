@@ -1,0 +1,21 @@
+<header>
+  <div class="logo-container">
+    <img style="margin-left: 12px" src="assets/images/logo.jpg" alt="Logo" />
+  </div>
+  <nav>
+    <ul>
+      <li><a routerLink="/title-dashboard">Titles</a></li>
+      <li><a routerLink="/authors">Authors</a></li>
+      <li><a routerLink="/publishers">Publishers</a></li>
+      <li><a routerLink="/stores">Stores</a></li>
+      <li><a routerLink="/sales">Sales History</a></li>
+      <li><a routerLink="/jobs">Jobs</a></li>
+      <li><a routerLink="/employees">Employees</a></li>
+    </ul>
+  </nav>
+  <div class="logout-container">
+    <button type="button" class="logout-button" (click)="logout()">
+      Logout
+    </button>
+  </div>
+</header>

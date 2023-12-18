@@ -1,0 +1,23 @@
+<h1>info</h1>
+<div class="container">
+    <table *ngIf="!selectedPubinfoId" class="table table-striped" >
+       
+        <thead >
+            <tr>
+                <th>ID</th>
+                <th>PUB-ID</th>
+                <th>LOGO</th>
+                <th>PR_INFO</th>
+            </tr>
+        </thead>  
+        <tbody>
+            <tr *ngFor="let pubinfo of pubInfo">
+                <td>{{pubinfo.id}}</td>
+                <td>{{pubinfo.publisher.id}}</td>
+                <td>{{pubinfo.logo}}</td>
+                <td>{{pubinfo.prInfo}}</td>
+               
+            </tr>
+        </tbody>
+    </table>
+    </div>

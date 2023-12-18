@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+   
+ 
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="/jobid" routerLinkActive="active" class="nav-link">Get_jobId</a>
+        </li>
+        </ul>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="/jobminlevel" routerLinkActive="active" class="nav-link">Get_jobMinLevel</a>
+        </li>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a routerLink="/jobmaxlevel" routerLinkActive="active" class="nav-link">Get_jobMaxLevel</a>
+            </li>
+        </ul>
+</ul>
+</nav>
+   
+   
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>description</th>
+                <th>minLevel</th>
+                <th>maxLevel</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let job of jobs">
+                <td>{{job.id}}</td>
+                <td>{{job.description}}</td>
+                <td>{{job.minLevel}}</td>
+                <td>{{job.maxLevel}}</td>
+               
+             </tr>
+        </tbody>
+    </table>

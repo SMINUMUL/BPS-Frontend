@@ -1,0 +1,18 @@
+<div>
+    <h1>Store Details by City</h1>
+    <form>
+        <input type="text" placeholder="Enter City" name="getCity" [(ngModel)]="getCity">
+        <button type="button" class="btn btn-success" (click)="getStoreByCity()">Search</button>
+    </form>
+</div>
+ 
+<div *ngIf="getStoreCity">
+    <p>ID: {{getStoreCity?.id}}</p>
+    <p>Name: {{getStoreCity?.name}}</p>
+    <p>Address: {{getStoreCity?.address}}</p>
+    <p>City: {{getStoreCity?.city}}</p>
+    <p>State: {{getStoreCity?.state}}</p>
+    <p>Zip: {{getStoreCity?.zip}}</p>
+ 
+    <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+</div>

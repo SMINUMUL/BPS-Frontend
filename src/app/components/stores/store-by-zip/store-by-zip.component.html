@@ -1,0 +1,18 @@
+<div>
+    <h1>Store Details by Zip Code</h1>
+    <form>
+        <input type="text" placeholder="Enter Zip Code" name="getZip" [(ngModel)]="getZip">
+        <button type="button" class="btn btn-success" (click)="getStoreByZip()">Search</button>
+    </form>
+</div>
+ 
+<div *ngIf="getStoreZip">
+    <p>ID: {{getStoreZip?.id}}</p>
+    <p>Name: {{getStoreZip?.name}}</p>
+    <p>Address: {{getStoreZip?.address}}</p>
+    <p>City: {{getStoreZip?.city}}</p>
+    <p>State: {{getStoreZip?.state}}</p>
+    <p>Zip: {{getStoreZip?.zip}}</p>
+ 
+    <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+</div>

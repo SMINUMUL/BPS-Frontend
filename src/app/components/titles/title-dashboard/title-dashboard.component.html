@@ -1,0 +1,21 @@
+<div>
+  <div class="title-dashboard">
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  
+    <div class="side-container">
+      <app-title-dropdowns></app-title-dropdowns>
+      <div class="top-right-selector">
+        <div class="selector-title">Top 5 Titles</div>
+        <app-top-5-titles></app-top-5-titles>
+      </div>
+  
+      <div class="bottom-right-selector">
+        <div class="selector-title">Top 5 Expensive</div>
+        <app-top-5-expensive></app-top-5-expensive>
+      </div>
+    </div>
+  </div>
+  <app-carousel></app-carousel>
+</div>

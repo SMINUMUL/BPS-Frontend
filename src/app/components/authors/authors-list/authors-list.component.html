@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+   
+ 
+    <!-- <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="#" routerLinkActive="active" class="nav-link">LIST</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="Author" routerLinkActive="active" class="nav-link">ADD</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="Author" routerLinkActive="active" class="nav-link">UPDATE</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="getinfo" routerLinkActive="active" class="nav-link">GET_INFO</a>
+        </li>
+    </ul> -->
+   
+        <ul>
+ 
+          <li><a routerLink="/getinfo">GET_INFO</a></li>
+        </ul>
+   
+</nav>
+ 
+<div class="container"></div>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FIRSTNAME</th>
+                <th>LASTNAME</th>
+                <th>PHONE</th>
+                <th>STATE</th>
+                <th>CITY</th>
+                <th>ZIP</th>
+                <th>ADDRESS</th>
+                <th>CONTRACT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let  AuthorModel of authors">
+                <td> {{AuthorModel.id}}</td>
+                <td>{{ AuthorModel.firstName}}</td>
+                <td>{{ AuthorModel.lastName}}</td>
+                <td>{{ AuthorModel.phone}}</td>
+                <td>{{ AuthorModel.state}}</td>
+                <td>{{ AuthorModel.city}}</td>
+                <td>{{ AuthorModel.zip}}</td>
+                <td>{{ AuthorModel.address}}</td>
+                <td>{{ AuthorModel.contract}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

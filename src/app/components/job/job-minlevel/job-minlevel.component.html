@@ -1,0 +1,16 @@
+<div>
+    <h1>Job Details</h1>
+    <form>
+        <input type="text" name="minLevel"[(ngModel)]="getminlevel" >
+        <button type="button" class="btn btn-success" (click)="getJobByminlevel()">Search</button>
+    </form>
+</div>
+ 
+<div *ngIf="getJobminlevel" >
+ 
+        <p>ID: {{getJobminlevel?.id}}</p>
+        <p>Description: {{getJobminlevel?.description}}</p>
+        <p>MINLEVEL: {{getJobminlevel?.minLevel}}</p>
+        <p>MAXLEVEL: {{getJobminlevel?.maxLevel}}</p>
+       <button type="button" class="btn btn-warning" (click)="viewAll()">Back</button>
+    </div>

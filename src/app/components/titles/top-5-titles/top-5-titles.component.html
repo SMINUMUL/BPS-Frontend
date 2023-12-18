@@ -1,0 +1,9 @@
+<div class="top-5-titles">
+  <ul>
+    <li *ngFor="let title of top5Titles">
+      <a [routerLink]="['title-view', title.title]">
+        {{ title.title }}
+      </a>
+    </li>
+  </ul>
+</div>

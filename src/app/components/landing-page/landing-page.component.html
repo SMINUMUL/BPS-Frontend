@@ -1,0 +1,55 @@
+<img
+  src="https://images.pexels.com/photos/2041540/pexels-photo-2041540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  alt="Background Image"
+  class="background-image"
+/>
+<div class="container">
+  <h1>Nalanda Publishers</h1>
+  <form>
+    <div class="text-danger small" style="font-style: italic;">
+      {{ errorMessage }}
+    </div>
+    <div class="form-group">
+      <label for="userName">User Name:</label>
+      <input
+        type="text"
+        id="userName"
+        name="userName"
+        [(ngModel)]="user.userName"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="user.userPassword"
+        required
+      />
+    </div>
+
+    <!-- New registration field -->
+    <div class="form-group" *ngIf="showRegistrationField">
+      <label for="registrationCode">Registration Code:</label>
+      <input
+        type="password"
+        id="registrationCode"
+        name="registrationCode"
+        [(ngModel)]="registrationCode"
+      />
+    </div>
+
+    <div class="form-group" fxLayout="row" fxLayoutAlign="space-between center">
+      <button type="button" (click)="login()">Login</button>
+      <button
+        type="button"
+        class="register-button"
+        (click)="handleRegistrationAndToggle()"
+      >
+        Register
+      </button>
+    </div>
+  </form>
+</div>
